@@ -1,0 +1,356 @@
+body {
+    background-color: #0001;
+    overflow: hidden;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+
+    /*background: linear-gradient(-233deg, #000 30%, #fbff00 65%) no-repeat;*/
+    
+}
+
+main .site {
+    display: none;
+    height: 100vh;
+}
+
+main .site.selecionado {
+    display: block;
+}
+
+main .site .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+  --sz: 4px; /*** size ***/
+  --sp: 5s; /*** speed ***/
+  --b1: #211e1e; /*** color ***/
+  --b2: #1c1b18; /*** color ***/
+  --b3: #0c0b0a; /*** color ***/
+  --b4: #0c0b0ae0; /*** color ***/
+  --c1: #ffffff; /*** color ***/
+  --ts: 50% / calc(var(--sz) * 17.5) calc(var(--sz) * 29.5);
+  background:
+		/* black shadows */ radial-gradient(
+        circle at 50% 50%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 0% 0%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 0% 100%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 100% 0%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 100% 100%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    /* border bottom */
+      conic-gradient(
+        from 90deg at 97.5% 67%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 90deg at 97.5% 67%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    conic-gradient(
+        from 182.5deg at 2.5% 67%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 182.5deg at 2.5% 67%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /* border top */
+      conic-gradient(
+        from 270deg at 2.5% 33%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 270deg at 2.5% 33%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    conic-gradient(
+        from 2.5deg at 97.5% 33%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 2.5deg at 97.5% 33%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /* bottom */
+      conic-gradient(
+        from 116.5deg at 50% 85.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 116.5deg at 50% 85.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 116.5deg at 50% 85.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    conic-gradient(from 120deg at 50% 83%, var(--c1) 0 120deg, #fff0 0 100%)
+      var(--ts),
+    /* top */
+      conic-gradient(
+        from -63.5deg at 50% 14.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from -63.5deg at 50% 14.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from -63.5deg at 50% 14.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    conic-gradient(from -60deg at 50% 17%, var(--c1) 0 120deg, #fff0 0 100%)
+      var(--ts),
+    /* central gradient */
+      conic-gradient(
+        from 0deg at 50% 50%,
+        #fff0 0 2deg,
+        var(--b2) 2.5deg 57.5deg,
+        #fff0 58deg 62.5deg,
+        var(--b1) 63deg 117.5deg,
+        #fff0 118deg 122.5deg,
+        var(--b3) 123deg 177.5deg,
+        #fff0 178deg 182deg,
+        var(--b2) 182.5deg 237.5deg,
+        #fff0 0 242.5deg,
+        var(--b1) 243deg 297.5deg,
+        #fff0 298deg 302.5deg,
+        var(--b3) 303deg 357.5deg,
+        #fff0 358deg 360deg
+      )
+      var(--ts),
+    /* bg */ var(--c1);
+  animation: colors var(--sp) linear 0s infinite;
+}
+
+
+
+.conteudo {
+
+    position: absolute;
+    top: 30px;
+    left: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .titulo {
+    color: white;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+
+.conteudo .descricao {
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.botoes .botao {
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 100%;
+    max-width: 99%;
+}
+.botoes .botao img {
+    border-radius: 100%;
+    max-width: 99%;
+
+}
+
+.botoes .botao.selecionado {
+
+    box-shadow: 0 0 20px #ff0000d9;
+    box-sizing: content-box;
+    border-radius: 100%;
+    max-width: 99%;
+
+}
+
+.artes{
+   
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 30px ;
+    /*flex-direction: row;*/
+    aspect-ratio: 3/3;
+    border-radius: 8px;
+    object-fit: contain;
+    
+}
+.artes .desenho {
+    top: 50px;
+    left: 400px;
+    width: 350px;
+    aspect-ratio: 3/2;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    object-fit: contain;
+  
+}
+
+.artes .desenho .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: contain;
+}
+
+.artes .desenho .image-box img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 3/2;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.artes .desenho::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.artes .desenho:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.artes .desenho:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.content h2,.content p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+.content h2 {
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d1d1d1;
+  transform: translateY(50%);
+}
+
+.artes .desenho:hover .content h2 {
+    scale: 1;
+    opacity: 1;
+}
+
+.artes .desenho:hover .content p {
+    opacity: 1;
+    transform: translateY(0);
+}
